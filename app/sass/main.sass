@@ -1,0 +1,688 @@
+@import "variables"
+@import "fonts"
+@import "default"
+
+.header
+    padding-top: 1.2rem
+    position: absolute
+    left: 0
+    right: 0
+
+    @media screen and (max-width: 768px)
+        padding-top: 1.5rem
+
+    &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        @media screen and (max-width: 450px)
+            padding: 0 .5rem
+
+        .logo__link
+            max-width: 10.9rem
+            width: 100%
+
+            img
+                object-fit: contain
+                width: 100%
+                height: 100%
+
+            @media screen and (max-width: 450px)
+                max-width: 6.5rem
+    .header-nav__link
+        font-size: 1.4rem
+
+    .header-nav
+
+       .header-nav__list
+           display: flex
+           align-items: center
+
+       .header-nav__item
+           margin-right: 4rem
+
+           &:last-child
+               margin-right: 0
+
+       @media screen and (max-width: 450px)
+            display: none
+
+    .header-mobile__menu--open, .header-mobile__menu--close
+        border: none
+        background: transparent
+        padding: 0
+        outline: none
+        font-size: 1.6rem
+        line-height: 2.5rem
+        letter-spacing: 0.1px
+        text-transform: capitalize
+        color: $white
+        font-weight: 700
+        font-family: 'Lato', sans-serif
+
+        @media screen and (min-width: 451px)
+            display: none
+
+    .header-mobile__menu
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100vw
+        height: 100vh
+        overflow-x: hidden
+        overflow-y: auto
+        background: $gradient
+        z-index: 99999
+        padding: 1.7rem 2rem 1.7rem 2rem
+        display: flex
+        flex-direction: column
+        transform: translateY(-100%)
+        transition: $transition
+
+        &.__active
+            transform: translateY(0)
+
+        .header-nav
+            display: flex
+            height: 100%
+            align-items: center
+            justify-content: center
+
+            .header-nav__list
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+
+            .header-nav__item
+                margin: 0 0 4.5rem 0
+
+            .header-nav__link
+                font-size: 2.7rem
+                line-height: 3.6rem
+                color: $white
+                font-weight: 700
+
+
+        @media screen and (min-width: 451px)
+            display: none
+
+
+
+
+.introduction
+    background: $gradient
+    height: 100%
+
+    @media screen and (max-width: 768px)
+        height: 39rem
+
+    @media screen and (max-width: 450px)
+        height: 40.5rem
+
+    .introduction-wrap
+        min-height: calc(39.2rem - -3rem)
+        display: flex
+        align-items: center
+        justify-content: center
+
+        @media screen and (max-width: 450px)
+            min-height: 39.2rem
+
+    &-title
+        font-weight: 700
+        font-size: 4.8rem
+        line-height: 6.5rem
+        color: $white
+
+        @media screen and (max-width: 450px)
+            font-size: 3.8rem
+            line-height: 5.1rem
+            text-align: center
+
+        span
+            display: block
+
+            @media screen and (max-width: 450px)
+                display: inline
+
+.breadcrumbs
+    margin: 5rem 0 3rem 0
+
+    @media screen and (max-width: 768px)
+        margin: 5.4rem 0 3rem 0
+
+    @media screen and (max-width: 450px)
+        margin: 3.4rem 0 2rem 0
+
+    .breadcrumbs-list
+        display: flex
+        align-items: center
+
+        .breadcrumbs-list__item
+            display: flex
+            align-items: center
+
+            &:after
+                content: ""
+                background: url("../images/arrow-right-black.svg") no-repeat 100%
+                width: .6rem
+                height: .9rem
+                display: inline-block
+                background-size: cover
+                margin: 0 .7rem 0 1rem
+
+            &:first-of-type
+
+                .breadcrumbs-list__link
+                    color: $green
+
+            &:last-of-type
+
+                &:after
+                    content: none
+
+        .breadcrumbs-list__link
+            font-weight: 400
+            font-size: 1.6rem
+            color: $darkBlue
+
+.about-work
+    margin-bottom: 4rem
+
+    @media screen and (max-width: 768px)
+        margin-bottom: 5.5rem
+
+    @media screen and (max-width: 450px)
+        margin-bottom: 1rem
+
+    &__title
+        margin-bottom: 1.4rem
+
+        @media screen and (max-width: 450px)
+            margin-bottom: 1rem
+    .about-work__descr
+
+        .about-work__text
+            margin-bottom: 2.5rem
+
+            &:last-child
+                margin-bottom: 0
+
+.about-team
+
+    @media screen and (max-width: 450px)
+        margin-bottom: 1rem
+
+    &__title
+        margin-bottom: 1rem
+
+        @media screen and (max-width: 450px)
+            margin-bottom: .5rem
+
+    &__text
+        margin-bottom: 4rem
+
+        @media screen and (max-width: 768px)
+            margin-bottom: 3.5rem
+
+    .about-personality
+        border: 1px solid #C0C7D9
+        box-shadow: 0px 5px 20px rgba(77, 77, 158, 0.21)
+        background-color: $white
+        padding: 2rem 2.5rem 2.5rem 2rem
+        margin-bottom: 4rem
+
+        @media screen and (max-width: 768px)
+            padding: 1.6rem 2.5rem 2.5rem 2rem
+            margin-bottom: 3.5rem
+
+        @media screen and (max-width: 450px)
+            padding: 1.5rem
+            margin-bottom: 2.5rem
+
+        .about-personality__wrap
+            display: flex
+            align-items: flex-start
+
+            @media screen and (max-width: 1024px)
+                align-items: center
+
+            @media screen and (max-width: 768px)
+                align-items: flex-end
+
+            @media screen and (max-width: 700px)
+                flex-direction: column
+
+        .about-personality__descr
+            flex: 69%
+            align-self: flex-end
+
+        .about-personality__info
+            margin-right: 3rem
+            flex: 30%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            text-align: center
+
+            @media screen and (max-width: 768px)
+                align-self: flex-start
+
+            @media screen and (max-width: 700px)
+                flex: initial
+                margin-right: 0
+                width: 100%
+                margin-bottom: 1.5rem
+
+            .personality-placeholder__img
+                max-width: 11rem
+                width: 100%
+                max-height: 11rem
+                border-radius: 50%
+                overflow: hidden
+                margin-bottom: 2.7rem
+
+                @media screen and (max-width: 768px)
+                    margin-bottom: 3.7rem
+
+                @media screen and (max-width: 450px)
+                    margin-bottom: 2rem
+
+                img
+                    object-fit: cover
+                    width: 100%
+                    height: 100%
+
+            .personality-wrap
+                display: flex
+                flex-direction: column
+                margin-bottom: 1.5rem
+
+                @media screen and (max-width: 768px)
+                    margin-bottom: 2.7rem
+
+                @media screen and (max-width: 450px)
+                    margin-bottom: 1.7rem
+
+.interpretation
+
+    &-title
+        margin-bottom: 2rem
+
+        @media screen and (max-width: 450px)
+
+            margin-bottom: 1rem
+
+            br
+                display: none
+
+
+.main-news
+
+    @media screen and (max-width: 1200px)
+        max-width: 30rem
+        width: 100%
+
+    @media screen and (max-width: 1024px)
+        display: none
+
+    .main-news__heading
+        margin-bottom: 2rem
+        display: block
+        text-align: center
+
+    .news-country
+        position: relative
+        background: var(--image)
+        width: 30rem
+        height: 24rem
+        background-size: 100%
+        margin-bottom: 2rem
+        cursor: url("../images/cursor-icon.svg"), auto
+        transition: background-size .3s ease-in
+
+        &:hover
+            background-size: 145%
+
+            .news-country__descr
+                color: $hover
+
+        &:last-child
+            margin-bottom: 3.7rem
+
+        &:before
+            content: ""
+            width: 100%
+            height: 100%
+            background: $gradient
+            position: absolute
+            opacity: .5
+
+        .news-country__img
+            position: relative
+
+        .news-country__descr
+            font-size: 2.2rem
+            line-height: 3rem
+            font-weight: 700
+            color: $white
+            position: absolute
+            bottom: 2rem
+            left: 2rem
+            transition: $transition
+
+    .table-content
+        max-width: 27.2rem
+        width: 100%
+        background-color: $white
+        border: 1px solid #D9DCE4
+        height: 5.4rem
+        margin-left: auto
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        box-shadow: 0px 3px 10px #D9DCE4
+        cursor: url("../images/cursor-icon.svg"), auto
+        border-radius: 5px
+
+        &:hover
+            border-bottom-right-radius: 0
+
+            .table-content__btn
+
+                &:before
+                    transform: translate(-50%, -50%) scale(1)
+
+                img
+                    transform: scale(0)
+                    transform-origin: 50% 50%
+                    transition: $transition
+
+            .dropdown_menu--animated
+                display: block
+
+        .table-hover__list
+            display: flex
+            flex-direction: column
+            position: absolute
+            top: 100%
+            border: 1px solid #D9DCE4
+            border-top: none
+            border-radius: 5px
+            padding: 1.2rem 1.9rem 2.9rem 1.9rem
+            background-color: $white
+            border-top-right-radius: 0
+            border-top-left-radius: 0
+            min-width: 27.2rem
+            max-width: 27.3rem
+            animation: rotateMenu 400ms ease-in-out forwards
+            transform-origin: top center
+
+            @keyframes rotateMenu
+                0%
+                    transform: rotateX(-90deg)
+
+                70%
+                    transform: rotateX(20deg)
+
+                100%
+                    transform: rotateX(0deg)
+
+            .table-hover__item
+                margin-bottom: 2rem
+
+                &:last-child
+                    margin-bottom: 0
+
+            .table-hover__link
+                font-weight: 700
+                font-size: 1.4rem
+                line-height: 1.6rem
+                color: $black
+                transition: $transition
+
+                &:hover
+                    color: $hover
+
+        .dropdown_menu--animated
+            display: none
+
+
+        .table-content__subtitle
+            font-weight: 700
+            font-size: 1.4rem
+            line-height: 1.6rem
+            color: $green
+            text-transform: uppercase
+
+        .table-content__btn
+            border: none
+            outline: none
+            border-radius: 50%
+            width: 5.5rem
+            height: 5.5rem
+            padding: 0
+            background-color: $green
+            position: absolute
+            left: -32px
+            top: -1px
+            z-index: 1
+
+            &:before
+                content: ""
+                background: url("../images/table-content-icon-close.svg") no-repeat 100%
+                width: 1.7rem
+                height: 1.7rem
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%) scale(0)
+                transform-origin: 50% 50%
+                transition: $transition
+
+            img
+                transition: $transition
+.main-wrap
+
+
+    .main-content__wrap
+        display: grid
+        grid-column-gap: 7.5rem
+        grid-template-columns: 68% 26%
+
+        @media screen and (max-width: 1200px)
+            grid-column-gap: 3.5rem
+            grid-template-columns: 65% 29%
+
+        @media screen and (max-width: 1150px)
+            grid-template-columns: 63% 31%
+
+        @media screen and (max-width: 1024px)
+            grid-gap: initial
+            grid-template-columns: 100%
+
+.footer
+    background: $gradient
+    padding: 7.3rem 0 2rem 0
+
+    @media screen and (max-width: 768px)
+        padding: 5.3rem 0 2rem 0
+
+    @media screen and (max-width: 450px)
+        padding: 2rem 0 4rem 0
+
+    &-wrap
+        display: flex
+        align-items: flex-start
+        margin-bottom: 4.2rem
+
+        @media screen and (max-width: 768px)
+            flex-direction: column
+
+            @media screen and (max-width: 450px)
+                margin-bottom: 2.2rem
+
+    .footer-descr
+        display: flex
+        flex-direction: column
+        flex: 25.5%
+        margin-right: 12.5rem
+
+        @media screen and (max-width: 1024px)
+            margin-right: 6rem
+            flex: 40%
+
+        @media screen and (max-width: 768px)
+            flex: 100%
+            margin-right: 0
+            padding: 0 .6rem 0 .4rem
+            margin-bottom: 3.4rem
+
+        @media screen and (max-width: 450px)
+            margin-bottom: 1.2rem
+
+        .logo__link
+            margin-bottom: 1.5rem
+            max-width: 10.9rem
+            width: 100%
+
+            img
+                object-fit: contain
+                width: 100%
+                height: 100%
+
+            @media screen and (max-width: 768px)
+                margin-bottom: 1.1rem
+            @media screen and (max-width: 450px)
+                max-width: 6.5rem
+                margin-bottom: .4rem
+
+        .footer-descr__text
+            color: $white
+
+    .footer-global__nav
+        display: flex
+        flex: 73%
+        justify-content: space-between
+        align-items: flex-start
+        padding: 1.3rem 7rem 0 0
+
+        @media screen and (max-width: 1024px)
+            flex: 60%
+
+        @media screen and (max-width: 768px)
+            flex: auto
+            padding: 0 7.2rem 0 .5rem
+            width: 100%
+
+        @media screen and (max-width: 550px)
+            padding: 0 .5rem 0 .5rem
+
+        @media screen and (max-width: 450px)
+            flex-direction: column
+
+        .footer-nav__heading
+            color: $white
+            margin-bottom: 2.7rem
+            display: inline-block
+
+            @media screen and (max-width: 450px)
+                display: flex
+                align-items: center
+                justify-content: space-between
+                mix-blend-mode: normal
+                border:
+                    top: 1px solid rgba(233, 238, 255, .5)
+                    bottom: 1px solid rgba(233, 238, 255, .5)
+                padding: 2rem 2rem
+                margin: 0 -2rem
+                position: relative
+                flex-shrink: 0
+                font-size: 1.6rem
+
+                &:after
+                    content: ""
+                    background: url("../images/mobile-footer-menu-arrow-up.svg") no-repeat 100%
+                    width: 1rem
+                    height: .6rem
+                    display: inline-block
+                    transform: rotate(0)
+                    transition: $transition
+
+        .footer-nav__list
+
+            .footer-nav__item
+                margin-bottom: 1.7rem
+
+                &:last-of-type
+                    margin-bottom: 0
+
+        .footer-nav
+
+            @media screen and (max-width: 450px)
+                width: 100%
+
+                .footer-nav__wrap
+                    display: none
+
+                    &.active-list
+                        display: block
+
+                .footer-nav__list
+                    border-bottom: 1px solid rgba(233, 238, 255, .5)
+                    margin: 0 -2rem
+                    padding: 1.5rem 2rem 1.5rem 2rem
+
+                    @media screen and (max-width: 450px)
+                        padding: 1.9rem 2rem 1.9rem 2rem
+
+
+                &:last-of-type
+
+                    .footer-nav__wrap
+                        display: flex
+                        margin-top: 1.7rem
+
+                    .footer-nav__list
+                        display: flex
+                        flex-wrap: wrap
+                        align-items: center
+                        justify-content: center
+                        border-bottom: none
+
+                        @media screen and (max-width: 450px)
+                            padding: .8rem 1rem 1rem 1rem
+
+                    .footer-nav__item
+                        margin: 0 1.5rem 1.5rem 1.5rem
+
+
+    .footer-copyright
+        text-align: center
+
+        @media screen and (max-width: 450px)
+            padding: 0 .5rem
+
+        &__descr
+            font-family: 'NunitoSans', sans-serif
+            font-weight: 400
+            font-size: 1.4rem
+            line-height: 2.2rem
+            color: $white
+            letter-spacing: 0.1px
+
+            span
+                display: block
+
+                @media screen and (max-width: 600px)
+                    display: inline-block
+
+
+    .footer-nav__heading.rotate:after
+        transform: rotate(180deg)
